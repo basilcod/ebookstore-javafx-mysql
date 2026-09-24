@@ -1,0 +1,235 @@
+/* =============================================================================
+   E-Bookstore THEME v4.1 (STABLE FIX)
+   Fixes: Background Loading Issue, Text Contrast
+   ============================================================================= */
+
+/* --- 1. BASE LAYER (Safe Dark Background) --- */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-font-size: 14px;
+    /* ÎáÝíÉ ÏÇßäÉ ÂãäÉ ÊÚãá 100% */
+    -fx-base: #101010;
+    -fx-background: #101010;
+    /* ÊÏÑÌ áæäí ÈÓíØ æÃäíÞ (Deep Space) */
+    -fx-background-color: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    -fx-text-fill: #ffffff;
+    -fx-control-inner-background: #1e1e1e;
+}
+
+/* --- 2. MenuBar --- */
+.menu-bar {
+    -fx-background-color: rgba(30, 30, 30, 0.9);
+    -fx-border-color: rgba(255, 255, 255, 0.1);
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5;
+}
+.menu-bar .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.menu-item {
+    -fx-background-color: #2c3e50;
+}
+.menu-item .label {
+    -fx-text-fill: white;
+}
+.menu-item:focused {
+    -fx-background-color: #00c6ff;
+}
+.context-menu {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #00c6ff;
+}
+
+/* --- 3. Inputs (Visible Text Fix) --- */
+.text-field, .combo-box, .date-picker .text-field, .text-area {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* ÎáÝíÉ ÔÝÇÝÉ ááÍÞá */
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #bdc3c7; /* áæä ÑãÇÏí ÝÇÊÍ ááäÕ ÇáÊáãíÍí */
+    -fx-background-radius: 8;
+    -fx-border-color: rgba(255, 255, 255, 0.2);
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+}
+
+.text-field:focused, .combo-box:focused, .text-area:focused {
+    -fx-border-color: #00c6ff;
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 198, 255, 0.4), 8, 0, 0, 0);
+}
+
+/* ComboBox Fixes */
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+.combo-box-popup .list-view {
+    -fx-background-color: #1e272e;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 10, 0, 0, 5);
+    -fx-border-color: #00c6ff;
+}
+.combo-box-popup .list-view .list-cell {
+    -fx-text-fill: white;
+    -fx-padding: 8;
+}
+.combo-box-popup .list-view .list-cell:filled:hover {
+    -fx-background-color: rgba(0, 198, 255, 0.2);
+    -fx-cursor: hand;
+}
+.combo-box-popup .list-view .list-cell:filled:selected {
+    -fx-background-color: #00c6ff;
+    -fx-text-fill: black;
+}
+
+/* --- 4. Typography --- */
+.label { -fx-text-fill: #ecf0f1; }
+
+.section-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+    -fx-text-fill: linear-gradient(to right, #00c6ff, #0072ff); 
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 198, 255, 0.4), 15, 0, 0, 0);
+    -fx-padding: 0 0 20 0;
+}
+
+/* --- 5. Buttons (Neon) --- */
+.button {
+    -fx-background-color: #3e3e42;
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-cursor: hand;
+    -fx-padding: 8 20;
+    -fx-font-weight: bold;
+    -fx-border-color: rgba(255,255,255,0.1);
+    -fx-transition: all 0.2s;
+}
+.button:hover {
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+    -fx-background-color: #4e4e52;
+    -fx-effect: dropshadow(gaussian, rgba(255,255,255,0.3), 8, 0, 0, 0);
+}
+.primary-button {
+    -fx-background-color: linear-gradient(to right, #11998e, #38ef7d);
+    -fx-text-fill: #000;
+    -fx-font-weight: 800;
+}
+.primary-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(56, 239, 125, 0.6), 12, 0, 0, 0);
+}
+.delete-button {
+    -fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a);
+    -fx-text-fill: white;
+}
+.delete-button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(239, 71, 58, 0.6), 12, 0, 0, 0);
+}
+
+/* --- 6. TableView (Glassy Dark) --- */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255,255,255,0.1);
+    -fx-border-radius: 8;
+}
+.table-view .column-header-background {
+    -fx-background-color: rgba(0, 0, 0, 0.3);
+    -fx-border-bottom-color: #00c6ff;
+    -fx-border-width: 0 0 2 0;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #00c6ff;
+    -fx-font-weight: bold;
+}
+.table-cell {
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 5 10;
+}
+.table-row-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.03); /* áæä ÕÝ ÔÝÇÝ */
+}
+.table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.06);
+}
+.table-row-cell:hover {
+    -fx-background-color: rgba(0, 198, 255, 0.15);
+}
+.table-row-cell:selected {
+    -fx-background-color: rgba(0, 198, 255, 0.25);
+    -fx-border-color: #00c6ff;
+    -fx-border-width: 0 0 1 3;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* --- 7. Dashboard Cards (Glass Effect) --- */
+.stat-card {
+    /* ÎáÝíÉ ÏÇßäÉ ÔÝÇÝÉ áÖãÇä ÇáÙåæÑ Úáì ÇáÎáÝíÉ ÇáÈíÖÇÁ Ýí ÍÇá ÇáÎØÃ */
+    -fx-background-color: #1e1e1e; 
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0, 0, 8);
+    -fx-padding: 20;
+    -fx-border-color: rgba(255,255,255,0.05);
+}
+.stat-card:hover {
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-background-color: #252526;
+}
+.card-blue { -fx-border-width: 0 0 0 5; -fx-border-color: transparent transparent transparent #00c6ff; }
+.card-green { -fx-border-width: 0 0 0 5; -fx-border-color: transparent transparent transparent #38ef7d; }
+.card-orange { -fx-border-width: 0 0 0 5; -fx-border-color: transparent transparent transparent #ffb347; }
+.card-purple { -fx-border-width: 0 0 0 5; -fx-border-color: transparent transparent transparent #a18cd1; }
+
+.stat-value {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: 900;
+}
+
+/* --- 8. Dialogs (Forcing Dark Mode) --- */
+.dialog-pane {
+    -fx-background-color: #1e272e; /* áæä ÛÇãÞ ÕÑíÍ */
+    -fx-text-fill: white;
+    -fx-border-color: rgba(255,255,255,0.1);
+    -fx-border-width: 1;
+}
+.dialog-pane > .content.label {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: #2c3e50;
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: #00c6ff;
+}
+.dialog-pane .header-panel .label {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00c6ff;
+}
+.dialog-pane .button-bar {
+    -fx-background-color: #1e272e;
+}
+
+/* --- 9. Charts --- */
+.chart-plot-background { -fx-background-color: transparent; }
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines { -fx-stroke: rgba(255,255,255,0.1); }
+.axis { -fx-tick-label-fill: #bdc3c7; }
+.axis-label { -fx-text-fill: #bdc3c7; }
+.default-color0.chart-bar {
+    -fx-background-color: linear-gradient(to top, #00c6ff, #0072ff);
+    -fx-bar-fill: null;
+}
+.chart-legend { -fx-background-color: transparent; }
+.chart-legend-item-text { -fx-fill: white; }
+
+/* --- 10. Alerts --- */
+.alert-error .dialog-pane { -fx-border-color: #ff416c; -fx-border-width: 2; }
+.alert-error .header-panel { -fx-border-color: #ff416c; }
+.alert-error .header-panel .label { -fx-text-fill: #ff416c; }
+
+.alert-success .dialog-pane { -fx-border-color: #00b09b; -fx-border-width: 2; }
+.alert-success .header-panel { -fx-border-color: #00b09b; }
+.alert-success .header-panel .label { -fx-text-fill: #00b09b; }

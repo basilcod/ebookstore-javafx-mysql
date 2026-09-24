@@ -1,0 +1,10 @@
+bin/
+.settings/
+.classpath
+.project
+build.fxbuild
+*.class
+*.jar
+.env
+.env.*
+!.env.example
